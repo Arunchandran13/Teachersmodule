@@ -1,0 +1,16 @@
+.form-tag{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-tag{
+    background-color: rgb(219, 219, 219);
+    padding: 30px;
+    border-radius: 10px;
+    
+}

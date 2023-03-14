@@ -1,6 +1,7 @@
 import { db } from './firebase';
 import React, { useState } from 'react';
 import { collection, addDoc } from "firebase/firestore";
+import './Home.css'
 
 function AddNameForm() {
   const [name, setName] = useState('');
@@ -18,10 +19,13 @@ function AddNameForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="students-card">
+      <form onSubmit={handleSubmit} className="form-tag">
+        <h1 className='title'>Enter your number</h1>
+        <input placeholder='Enter Roll Number' type="text" value={name} onChange={(event) => setName(event.target.value)} />
+        <button className='btn' type="submit">Submit</button>
+      </form>
+    </div>
   );
 }
 

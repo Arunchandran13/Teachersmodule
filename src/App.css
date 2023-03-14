@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+*{
+  border: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.students-card{
+  width: 100%;
+  height: 100vh;
+  background-color: grey;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgba(3, 22, 222, 0.553);
 }
 
-.App-link {
-  color: #61dafb;
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  padding: 30px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title{
+  margin-bottom: 25px;
+  color: rgb(87, 87, 87);
+}
+
+.btn{
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(11, 86, 126);
+  background-color: rgb(74, 134, 154); 
+  color: white;
+  cursor: pointer;
+}
+
+.names{
+  margin: 5px;
+  background-color: rgb(74, 134, 154);
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  color: white;
 }
