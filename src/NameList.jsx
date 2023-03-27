@@ -8,7 +8,7 @@ function NameList() {
   const [names, setNames] = useState([])
 
   const fetchNames = async() => {
-    await getDocs(collection(db, "teacher")).then((result) => {
+    await getDocs(collection(db, "students")).then((result) => {
       const newData = result.docs
       .map((doc) => ({...doc.data(), id:doc.id }));
         setNames(newData);                
@@ -17,7 +17,7 @@ function NameList() {
   }
 
   const deleteEntries = async() => {
-    await deleteField(collection(db, "teacher", "name")).then((result) => {
+    await deleteField(collection(db, "students", "name")).then((result) => {
       console.log(result)
     })
   }

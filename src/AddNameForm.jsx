@@ -5,9 +5,11 @@ import './Home.css'
 
 function AddNameForm() {
   const [name, setName] = useState('');
+  const [dissable, setDissable] = useState(false)
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setDissable(true)
     try {
       const docRef = await addDoc(collection(db, "teacher"), {
         name: name,    
@@ -23,7 +25,7 @@ function AddNameForm() {
       <form onSubmit={handleSubmit} className="form-tag">
         <h1 className='title'>Enter your number</h1>
         <input placeholder='Enter Roll Number' type="text" value={name} onChange={(event) => setName(event.target.value)} />
-        <button className='btn' type="submit"><a href='https://finalyrproject.netlify.app/'>Submit</a></button>
+        <button disabled={dissable} className='btn' type="submit"><a href='https://finalyrproject.netlify.app/'>Submit</a></button>
       </form>
     </div>
   );
